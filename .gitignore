@@ -2,3 +2,6 @@
 Thumbs.db
 .idea/
 .vscode/
+node_modules/
+dist/
+.astro/

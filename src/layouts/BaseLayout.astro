@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+
+const { title = 'Personal Blog', description = 'Notes, projects, and essays.' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`${base}/`}>Personal Blog</a>
+      <nav aria-label="Primary navigation">
+        <a href={`${base}/`}>Home</a>
+        <a href={`${base}/about/`}>About</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
