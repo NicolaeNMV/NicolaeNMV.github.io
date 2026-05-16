@@ -29,7 +29,7 @@ draft: false
 The site is configured for the GitHub Pages URL:
 
 ```txt
-https://NicolaeNMV.github.io/blog-personal/
+https://NicolaeNMV.github.io/
 ```
 
 The workflow in `.github/workflows/deploy.yml` builds the site and deploys `dist` when changes are pushed to `main`.
